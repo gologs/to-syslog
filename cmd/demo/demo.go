@@ -25,7 +25,7 @@ import (
 
 func main() {
 	syslog.Configure("", syslog.ToStderr, syslog.User)
-	config.Default, _ = config.DefaultConfig.With(
+	config.Logging = config.DefaultConfig.With(
 		config.Logger(tosyslog.Logger()),
 	)
 
